@@ -2,9 +2,10 @@ package com.example.demo.Model;
 
 public class Product {
 
-    private Long id;
-    private String name;
-    private Long price;
+    public Long id;
+    public String name;
+    public Long price;
+    public Long taxedPrice;
 
     public Product() {
     }
@@ -13,6 +14,7 @@ public class Product {
         this.id = id;
         this.name = name;
         this.price = price;
+        taxedPrice = taxedPrice(price);
     }
 
     private Long taxedPrice(Long price){

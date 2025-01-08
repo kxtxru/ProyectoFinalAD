@@ -16,17 +16,24 @@
     <a href="formNewProduct.html"><button>Nuevo Producto</button> </a
     ><a href=""><button>Tipos de Producto</button></a>
 
+    <br>
+    <br>
+
     <table>
       <thead>
         <th>Id</th>
         <th>Nombre</th>
         <th>Precio</th>
+        <th>Precio IVAdo</th>
+
       </thead>
 
-      <tr th:each="product: ${productos}">
+
+      <tr th:each="product: ${products}">
         <td th:text="${product.id}"></td>
         <td th:text="${product.name}"></td>
         <td th:text="${product.price}"></td>
+        <td th:text="${product.taxedPrice}"></td>
       </tr>
     </table>
   </body>

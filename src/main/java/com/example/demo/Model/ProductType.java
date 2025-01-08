@@ -1,7 +1,7 @@
 package com.example.demo.Model;
 
 public class ProductType {
-    private Long id;
-    private String name;
-    private String Description;
+    public Long id;
+    public String name;
+    public String Description;
 }

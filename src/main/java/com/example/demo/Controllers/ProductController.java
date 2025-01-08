@@ -24,7 +24,7 @@ public class ProductController {
     List<Product> productos = addProducts();
 
     private List<Product> addProducts(){
-        List<Product> productos = new ArrayList<Product>();
+        List<Product> productos = new ArrayList<>();
         productos.add(new Product(1L, "Mesa circular Razor", 200L));
         productos.add(new Product(2L, "Módulo televisor Candy", 850L));
         productos.add(new Product(3L, "Silla metálica Candy", 180L));
@@ -34,7 +34,7 @@ public class ProductController {
     
     @GetMapping("/products")
     public String listadoProductos(Model model){
-        model.addAttribute("productos", productos);
+        model.addAttribute("products", productos);
         return "products";
     }
 
