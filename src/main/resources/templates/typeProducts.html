@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+  </head>
+  <body>
+    <style>
+      table,th,td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+    <h1>Listado de Tipos de Productos</h1>
+    <a href="formNewProduct.html"><button>Nuevo Producto</button> </a
+    ><a href=""><button>Tipos de Producto</button></a>
+
+    <br>
+    <br>
+
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Desc</th>
+
+
+      </thead>
+
+
+      <tr th:each="typeproduct: ${typeproducts}">
+        <td th:text="${typeproduct.id}"></td>
+        <td th:text="${typeproduct.name}"></td>
+        <td th:text="${typeproduct.desciption}"></td>
+      </tr>
+    </table>
+  </body>
+</html>

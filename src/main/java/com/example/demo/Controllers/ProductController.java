@@ -14,10 +14,6 @@ import com.example.demo.Model.Product;
 
 
 
-
-
-
-
 @Controller
 public class ProductController {
 
